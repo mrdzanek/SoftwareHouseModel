@@ -34,14 +34,14 @@ public class Application {
                 runmode = Runmode.NORMAL;
         }
 
-//        Model model = new Model(runmode);
-        Model model = new Model(Runmode.NEGATIVE);
+        Model model = new Model(runmode);
+//        Model model = new Model(Runmode.NEGATIVE);
 
         model.simulateTimeMonths(60);
 //        List<Double> snapshot = model.dumpState();
-        System.out.println(model.getCustomerFlow());
-        System.out.println(model.getProgrammerFlow());
-        System.out.println(model.getMaintenanceRatio());
+//        System.out.println(model.getCustomerFlow());
+//        System.out.println(model.getProgrammerFlow());
+//        System.out.println(model.getMaintenanceRatio());
         System.out.println(model.getCashFlow());
         DataHelper.saveSnapshotToFile(model);
     }
